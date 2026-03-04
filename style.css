@@ -157,19 +157,41 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-font-size:30px;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
+font-weight:700;
+padding:15px 20px;
+border-radius:50px;
 text-decoration:none;
-box-shadow:0 0 10px rgba(0,0,0,.5);
+box-shadow:0 0 15px rgba(0,0,0,.4);
+transition:.3s;
+animation: pulse 2s infinite;
+}
+
+.whatsapp:hover{
+background:white;
+color:#25D366;
+transform:scale(1.1);
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
 .navbar{flex-direction:column;height:auto;padding:20px}
 .hero h1{font-size:26px}
+
+}
+
+/* SAYFA AÇILIŞ ANİMASYONU */
+body{
+opacity:0;
+animation:fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
 }
